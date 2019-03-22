@@ -8,6 +8,6 @@ Set-ADServerSettings -ViewEntireForest $True
 # Ask for the name of the existing AD user and store the answer in a variable called $UserName
 $UserName = Read-Host "Please enter the user name in the format firstname.lastname? For Example bart.simpson"
 
-Enable-RemoteMailbox  "$UserName@acme.com" -RemoteRoutingAddress "$UserName@ACME.onmicrosoft.com"
+Enable-RemoteMailbox "$UserName@acme.com" -RemoteRoutingAddress "$UserName@ACME.onmicrosoft.com"
 
 Remove-PSSession $Session
